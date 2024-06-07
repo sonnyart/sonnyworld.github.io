@@ -6,51 +6,188 @@
 -->
 <html>
 	<head>
-		<title>Strata by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Sonny Art</title>
+		<link rel="stylesheet" href="styles.css">
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				margin: 0;
+				padding: 0;
+			}
+			nav {
+				background-color: #333;
+				color: white;
+				padding: 15px;
+				text-align: center;
+			}
+			nav a {
+				color: white;
+				margin: 0 15px;
+				text-decoration: none;
+			}
+			.container {
+				padding: 20px;
+			}
+			.gallery {
+				display: flex;
+				overflow-x: auto; /* 가로 스크롤 가능하게 설정 */
+				gap: 10px;
+			}
+			.gallery div {
+				flex: 0 0 auto; /* 각 항목의 너비를 고정 */
+				width: 300px; /* 각 이미지의 너비를 원하는 크기로 설정 */
+			}
+			.gallery img {
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+			/* 모달 스타일 */
+			.modal {
+				display: none;
+				position: fixed;
+				z-index: 1;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+				background-color: rgb(0,0,0);
+				background-color: rgba(0,0,0,0.9);
+			}
+			.modal-content {
+				margin: auto;
+				display: block;
+				width: 90%;
+				max-width: 1920px;
+			}
+			.close {
+				position: absolute;
+				top: 15px;
+				right: 35px;
+				color: #f1f1f1;
+				font-size: 40px;
+				font-weight: bold;
+				transition: 0.3s;
+			}
+			.close:hover,
+			.close:focus {
+				color: #bbb;
+				text-decoration: none;
+				cursor: pointer;
+			}
+			.prev, .next {
+				cursor: pointer;
+				position: absolute;
+				top: 50%;
+				width: auto;
+				padding: 16px;
+				margin-top: -22px;
+				color: white;
+				font-weight: bold;
+				font-size: 20px;
+				transition: 0.3s;
+				user-select: none;
+			}
+			.next {
+				right: 0;
+			}
+			.prev {
+				left: 0;
+			}
+			.prev:hover, .next:hover {
+				background-color: rgba(0,0,0,0.8);
+			}
+		</style>
 	</head>
-	<body class="is-preload">
-
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
-					<h1><strong>Sonny Art</strong>
-					
+	<body>
+		<nav>
+			<a href="#home">홈</a>
+			<a href="#about">소개</a>
+			<a href="#collections">컬렉션</a>
+		</nav>
+		
+		<div class="container" id="home">
+			<h1>Welcome to Sonny Art</h1>
+			
+		</div>
+		
+		<div class="container" id="about">
+			<h2>About me</h2>
+			<p>I'm Son hyoseung a 3D environment artist at xl games.</p>
+		</div>
+		
+		<div class="container" id="collections">
+			<h2>Charlotte's Table</h2>
+			<div class="gallery">
+				<div>
+					<img src="images/Charlottes/world_2000.jpg" alt="컬렉션 1" onclick="openModal();currentSlide(1)">
 				</div>
-			</header>
-
-		<!-- Main -->
-			<div id="main">
-
-				<!-- One -->
-					<section id="one">
-						<header class="major">
-							<h2>About me.</h2>
-						</header>
-						<p>Hi Hello I'm Son hyoseung a 3D environment artist at XLGAMES.</p>
-					</section>
-
-				<!-- Two -->
-					<section id="two">
-						<h2>Art Works</h2>
-						<article class="col-6 col-12-xsmall work-item">
-							<a href="images/Charlottes/world_2000.JPG" class="image fit Charlottes" style="display: block; margin-bottom: 10px;"
-							   onclick="return showImage(event, 'images/Charlottes/world_2000.JPG');">
-								<img src="images/Charlottes/Title.jpg"/>
-							</a>
-							<a href="images/Charlottes/world_11000.JPG" class="image fit Charlottes" style="display: block; margin-bottom: 10px;"
-							   onclick="return showImage(event, 'images/Charlottes/world_11000.JPG');">							
-							</a>
-							<div>
-								<h3>Charlotte's Table</h3>
-								<p>mobile 3match puzzle game</p>
-								
-							</div>
-						</article>	
-						
+				<div>
+					<img src="images/Charlottes/world_11000.jpg" alt="컬렉션 2" onclick="openModal();currentSlide(2)">
+				</div>
+				<div>
+					<img src="images/Charlottes/collection3.jpg" alt="컬렉션 3" onclick="openModal();currentSlide(3)">
+				</div>
+				<!-- 필요한 만큼 더 많은 컬렉션을 추가하세요 -->
+			</div>
+		</div>
+	
+		<!-- 모달 -->
+		<div id="myModal" class="modal">
+			<span class="close" onclick="closeModal()">&times;</span>
+			<div class="modal-content">
+				<div class="mySlides">
+					<img src="images/Charlottes/world_2000.jpg" style="width:auto; max-width: 100%;">
+				</div>
+				<div class="mySlides">
+					<img src="images/Charlottes/world_11000.jpg" style="width:auto; max-width: 100%;">
+				</div>
+				<div class="mySlides">
+					<img src="images/Charlottes/collection3.jpg" style="width:100%">
+				</div>
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+		</div>
+	
+		<script>
+			let slideIndex = 1;
+	
+			function openModal() {
+				document.getElementById("myModal").style.display = "block";
+				showSlides(slideIndex);
+			}
+	
+			function closeModal() {
+				document.getElementById("myModal").style.display = "none";
+			}
+	
+			function plusSlides(n) {
+				showSlides(slideIndex += n);
+			}
+	
+			function currentSlide(n) {
+				showSlides(slideIndex = n);
+			}
+	
+			function showSlides(n) {
+				let i;
+				let slides = document.getElementsByClassName("mySlides");
+				if (n > slides.length) {slideIndex = 1}
+				if (n < 1) {slideIndex = slides.length}
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+				}
+				slides[slideIndex-1].style.display = "block";
+			}
+		</script>
+	</body>
+							
+						</article>
+											
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
 								<h3>Ultricies lacinia interdum</h3>
