@@ -33,11 +33,11 @@
 			.gallery {
 				display: flex;
 				overflow-x: auto; /* 가로 스크롤 가능하게 설정 */
-				gap: 10px;
+				gap: 5px;
 			}
 			.gallery div {
 				flex: 0 0 auto; /* 각 항목의 너비를 고정 */
-				width: 300px; /* 각 이미지의 너비를 원하는 크기로 설정 */
+				width: 400px; /* 각 이미지의 너비를 원하는 크기로 설정 */
 			}
 			.gallery img {
 				width: 100%;
@@ -104,9 +104,9 @@
 	</head>
 	<body>
 		<nav>
-			<a href="#home">홈</a>
-			<a href="#about">소개</a>
-			<a href="#collections">컬렉션</a>
+			<a href="#home">Home</a>
+			<a href="#about">About me</a>
+			<a href="#collections">ART</a>
 		</nav>
 		
 		<div class="container" id="home">
@@ -137,16 +137,32 @@
 			<h2>Project N1</h2>
 			<div class="gallery">
 				<div>
-					<img src="images/N1/N1_001.jpg" alt="컬렉션 1" onclick="openModal();currentSlide(4)">
+					<img src="images/N1/N1_001.jpg" alt="컬렉션 1" onclick="openModal();currentSlide(3)">
 				</div>
 				<div>
-					<img src="images/N1/N1_002.jpg" alt="컬렉션 2" onclick="openModal();currentSlide(5)">
+					<img src="images/N1/N1_002.jpg" alt="컬렉션 2" onclick="openModal();currentSlide(4)">
 				</div>
+        </div>
+		
+				<div class="container" id="collections">
+			<h2>Ruin of Temple</h2>
+			<div class="gallery">
+				<div>
+					<img src="images/Ruin/Ruin_01.jpg" alt="컬렉션 1" onclick="openModal();currentSlide(5)">
+				</div>
+				<div>
+					<img src="images/Ruin/Ruin_02.jpg" alt="컬렉션 2" onclick="openModal();currentSlide(6)">
+				</div>	
+				<div>
+						
+
 				
 				<!-- 필요한 만큼 더 많은 컬렉션을 추가하세요 -->
 			</div>
-		</div>
+        </div>
+		
 	
+
 		<!-- 모달 -->
 		<div id="myModal" class="modal">
 			<span class="close" onclick="closeModal()">&times;</span>
@@ -164,6 +180,14 @@
 				</div>
 				<div class="mySlides">
 					<img src="images/N1/N1_002.jpg" style="width:auto; max-width: 100%;">
+				</div>
+
+
+				<div class="mySlides">
+					<img src="images/Ruin/Ruin_01" style="width:auto; max-width: 100%;">
+				</div>
+				<div class="mySlides">
+					<img src="images/Ruin/Ruin_02.jpg" style="width:auto; max-width: 100%;">
 				</div>
 				
 
@@ -212,7 +236,7 @@
 				<!-- Three -->
 					<section id="three">
 						<h2>Work Experiece</h2>
-						<p>XL Games 2023.10 ~ ing .</p>
+						<p>XL Games 2023.10 ~ ing </p>
 						  AA2 3D Environment
 							
 				
