@@ -62,9 +62,12 @@
 			}
 			.modal-content {
 				margin: auto;
-				display: block;
-				width: 90%;
-				max-width: 1920px;
+				    display: flex;
+				    justify-content: center; /* 가로 중앙 정렬 */
+				    align-items: center; /* 세로 중앙 정렬 */
+				    height: 100vh; /* 화면 전체 높이 */
+				    width: 100vw; /* 화면 전체 너비 */
+				    max-width: 100%; /* 최대 너비 조정 */
 
 			}
 			.close {
@@ -169,7 +172,8 @@
 			<span class="close" onclick="closeModal()">&times;</span>
 			<div class="modal-content">
 				<div class="mySlides">
-					<img src="images/Charlottes/world_2000.JPG" style="width:auto; max-width: 100%;">
+					<img src="images/Charlottes/world_2000.JPG" style="max-width: 90vw; /* 뷰포트 너비의 90% */
+					    max-height: 90vh; /* 뷰포트 높이의 90% */ object-fit: contain; /* 이미지 비율 유지하며 중앙 정렬 */;">
 				</div>
 				<div class="mySlides">
 					<img src="images/Charlottes/world_11000.JPG" style="width:auto; max-width: 100%;">
