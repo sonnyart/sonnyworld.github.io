@@ -15,7 +15,10 @@
 				font-family: Arial, sans-serif;
 				margin: 0;
 				padding: 0;
-			}
+				background-color: black; /* 배경색을 블랙으로 설정 */
+				    color: white; /* 글자색도 흰색으로 바꿔 가독성을 높임 */
+				}
+	
 			nav {
 				background-color: #333;
 				color: white;
@@ -68,8 +71,8 @@
 				top: 15px;
 				right: 35px;
 				color: #f1f1f1;
-				font-size: 40px;
-				font-weight: bold;
+				font-size: 30px;
+				font-weight: normal;
 				transition: 0.3s;
 			}
 			.close:hover,
@@ -83,11 +86,11 @@
 				position: absolute;
 				top: 50%;
 				width: auto;
-				padding: 16px;
+				padding: 10px;
 				margin-top: -22px;
 				color: white;
-				font-weight: bold;
-				font-size: 20px;
+				font-weight: normal;
+				font-size: 16px;
 				transition: 0.3s;
 				user-select: none;
 			}
@@ -98,29 +101,29 @@
 				left: 0;
 			}
 			.prev:hover, .next:hover {
-				background-color: rgba(0,0,0,0.8);
+				background-color: rgba(0,0,0,0.6);
 			}
 		</style>
 	</head>
 	<body>
 		<nav>
-			<a href="#home">Home</a>
 			<a href="#about">About me</a>
-			<a href="#collections">ART</a>
+			<a href="#collections">Art</a>
+			<a href="#Work experice">Work experice</a>
 		</nav>
 		
-		<div class="container" id="home">
-			<h1>Welcome to Sonny Art</h1>
 			
 		</div>
 		
 		<div class="container" id="about">
 			<h2>About me</h2>
-			<p>Hi Hello I'm Son hyoseung a 3D environment artist at xl games.</p>
+			<p>Hello everyone I'm son hyoseung but I go by sonny a game 3d environment artist</p>
 		</div>
 		
+		
 		<div class="container" id="collections">
-			<h2>Charlotte's Table</h2>
+			<h2>Art</h2>
+			<p> Charlotte's Table</p>
 			<div class="gallery">
 				<div>
 					<img src="images/Charlottes/world_2000.JPG" alt="컬렉션 1" onclick="openModal();currentSlide(1)">
@@ -134,7 +137,7 @@
 		</div>
 		
 		<div class="container" id="collections">
-			<h2>Project N1</h2>
+			<p> Project N1</p>
 			<div class="gallery">
 				<div>
 					<img src="images/N1/N1_001.jpg" alt="컬렉션 1" onclick="openModal();currentSlide(3)">
@@ -145,7 +148,7 @@
         </div>
 		
 				<div class="container" id="collections">
-			<h2>Ruin of Temple</h2>
+			<p> Ruin of Temple</p>
 			<div class="gallery">
 				<div>
 					<img src="images/Ruin/Ruin_01.jpg" alt="컬렉션 1" onclick="openModal();currentSlide(5)">
@@ -234,10 +237,10 @@
 					
 
 				<!-- Three -->
-					<section id="three">
+					<section id="Work experice">
 						<h2>Work Experiece</h2>
 						<p>XL Games 2023.10 ~ ing </p>
-						  AA2 3D Environment
+						  AAC - 3D Environment Artist
 							
 				
 					</section>
@@ -248,15 +251,7 @@
 			<footer id="footer">
 				<div class="inner">
 					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
+						
 			</footer>
 
 		<!-- Scripts -->
