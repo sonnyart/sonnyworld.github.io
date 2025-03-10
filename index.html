@@ -36,7 +36,7 @@
 			.gallery {
 				display: flex;
 				overflow-x: auto; /* 가로 스크롤 가능하게 설정 */
-				gap: 5px;
+				gap: 15px;
 			}
 			.gallery div {
 				flex: 0 0 auto; /* 각 항목의 너비를 고정 */
@@ -51,7 +51,7 @@
 			.modal {
 				display: none;
 				position: fixed;
-				z-index: 1;
+				z-index: 0;
 				left: 0;
 				top: 0;
 				width: 100%;
@@ -65,6 +65,7 @@
 				display: block;
 				width: 90%;
 				max-width: 1920px;
+
 			}
 			.close {
 				position: absolute;
@@ -147,7 +148,7 @@
 				</div>
         </div>
 		
-				<div class="container" id="collections">
+		<div class="container" id="collections">		
 			<p> Ruin of Temple</p>
 			<div class="gallery">
 				<div>
@@ -155,11 +156,8 @@
 				</div>
 				<div>
 					<img src="images/Ruin/Ruin_02.jpg" alt="컬렉션 2" onclick="openModal();currentSlide(6)">
-				</div>	
-				<div>
+				</div>
 						
-
-				
 				<!-- 필요한 만큼 더 많은 컬렉션을 추가하세요 -->
 			</div>
         </div>
@@ -238,7 +236,7 @@
 
 				<!-- Three -->
 					<section id="Work experice">
-						<h2>Work Experiece</h2>
+						<h2>Work experiece</h2>
 						<p>XL Games 2023.10 ~ ing </p>
 						  AAC - 3D Environment Artist
 							
